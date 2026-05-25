@@ -1,0 +1,14 @@
+Bar shelf*
+* 3 shelf rows
+    * sections for alc
+        * alc objects
+
+Alc object:
+* properties
+    * image
+    * name
+
+
+menu item
+* sits above everyithing (use absolute postiion)
+* reads recipie list, displays recipie, reacts accordingly

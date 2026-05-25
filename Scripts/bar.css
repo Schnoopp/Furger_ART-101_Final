@@ -1,0 +1,53 @@
+.bar_shelf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(62, 32, 16);
+    height: 800px;
+}
+
+.shelf_row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    background-color: rgb(48, 17, 10);
+    height: 200px;
+    margin: 25px;
+}
+
+.shelf_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 8, 1);
+    height: 175px;
+    width: 175px;
+
+}
+
+
+
+.drink{
+    height: 100px;
+    width: 50px;
+}
+
+
+/*alc ids*/
+
+#vodka{
+    background-color: aliceblue;
+}
+
+#tequilla{
+    background-color: rgb(199, 145, 74);
+}
+
+#rum{
+    background-color: rgb(94, 46, 10);
+}
+
+#gin{
+    background-color: rgb(75, 203, 220);
+}

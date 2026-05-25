@@ -56,8 +56,50 @@
 
 /*syrups ids*/
 
+#grenadine {
+    background-color: rgb(255, 0, 85);
+    height: 50px;
+    width: 50px;
+}
+
+#bitters {
+    background-color: rgb(111, 78, 45);
+    height: 50px;
+    width: 50px;
+}
+
+#oj {
+    background-color: rgb(255, 128, 0);
+    height: 50px;
+    width: 50px;
+}
+#tonic {
+    background-color: rgb(202, 207, 209);
+    height: 50px;
+    width: 50px;
+}
 /*garnish ids*/
 
+#cherries {
+    background-color: rgb(141, 3, 3);
+    height: 25px;
+    width: 25px;
+}
+#lime {
+    background-color: rgb(47, 214, 28);
+    height: 25px;
+    width: 25px;
+}
+#salt {
+    background-color: rgb(207, 209, 202);
+    height: 25px;
+    width: 25px;
+}
+#sugar {
+    background-color: rgb(231, 244, 241);
+    height: 25px;
+    width: 25px;
+}
 
 
 

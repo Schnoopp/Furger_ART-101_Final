@@ -1,16 +1,17 @@
 let isHoldingObject = false;
 let heldobject;
 let ingredientList = [];
-
+let hoveredObject= null;
 
 
 getAllIngredients()
-
+GetAllShelves()
 
 // collects all objects of class item, creates an array of ingredients: name, position values
 function getAllIngredients() {
   const allIngredients = document.getElementsByClassName("item");
   console.log(allIngredients)
+
   for (let i = 0; i < allIngredients.length; i++) {
     const ingredientName = allIngredients[i].id
 
@@ -23,14 +24,25 @@ function getAllIngredients() {
       name: ingredientName,
       startingPosition_L: left,
       startingPosition_T: top
-
     }
+
     ingredientList.push(ingredient);
   }
-  console.log(ingredientList)
-  return
 
+  console.log(ingredientList)
+  return;
 };
+
+function GetAllShelves() {
+  const allShelves = document.getElementsByClassName("shelf_container");
+  console.log(allShelves)
+
+  for (let i = 0; i < allShelves.length; i++) {
+    allShelves[i].id = i;
+
+  }
+  console.log(allShelves)
+}
 
 //compares variable to all ingredients, checks if it's in array and returns object value
 function getItemValue(object) {
@@ -52,14 +64,35 @@ $('.item').click(function () {
     heldobject = event.target.id
     console.log('clicked ' + heldobject + ", this is a new thing")
   }
-  else if (clickedObject == heldobject) {
-    console.log("this is the same thing " + heldobject)
-    itemLetGo()
+  else if (clickedObject == heldobject){
+    console.log("clicked self")
+    if(hoveredObject == getItemValue(heldobject))
+    {
 
+      console.log("container object match")
+    }
+    else{
+      console.log("container object not match")
+    }
+
+    
+  }
 
   }
-});
+);
 
+
+$(".shelf_container").hover(function () {
+  if (hoveredObject == null) {
+    hoveredObject = this.id
+  
+
+  }
+  else if (hoveredObject = ! null) {
+    hoveredObject = null
+  };
+  console.log(hoveredObject)
+});
 
 $(document).mousemove(function (event) {
 
@@ -86,8 +119,8 @@ function itemLetGo() {
 
 
 
-  console.log("LEFT: "+ingredientList[itemIndex].startingPosition_L)
-  console.log("TOP: "+ingredientList[itemIndex].startingPosition_T)
+  console.log("LEFT: " + ingredientList[itemIndex].startingPosition_L)
+  console.log("TOP: " + ingredientList[itemIndex].startingPosition_T)
 
   let startingLeft = ingredientList[itemIndex].startingPosition_L
   let startingTop = ingredientList[itemIndex].startingPosition_T

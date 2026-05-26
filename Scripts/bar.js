@@ -1,7 +1,20 @@
 let isHoldingObject = false;
 let heldobject;
 let ingredientList = [];
-let hoveredObject= null;
+let hoveredObject = null;
+
+const recipies = [];
+recipies.push({ name: "Screwdriver", ingredients: ["vodka", "oj"] })
+recipies.push({ name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries"] })
+recipies.push({ name: "Marg"["tequilla", "lj", "lime","salt"] })
+console.log(recipies)
+
+
+let activeRecipie = Math.floor(Math.random() * 2);
+console.log(activeRecipie)
+console.log(recipies[activeRecipie])
+console.log(recipies[activeRecipie].ingredients)
+
 
 
 getAllIngredients()
@@ -10,7 +23,6 @@ GetAllShelves()
 // collects all objects of class item, creates an array of ingredients: name, position values
 function getAllIngredients() {
   const allIngredients = document.getElementsByClassName("item");
-  console.log(allIngredients)
 
   for (let i = 0; i < allIngredients.length; i++) {
     const ingredientName = allIngredients[i].id
@@ -29,19 +41,16 @@ function getAllIngredients() {
     ingredientList.push(ingredient);
   }
 
-  console.log(ingredientList)
   return;
 };
 
 function GetAllShelves() {
   const allShelves = document.getElementsByClassName("shelf_container");
-  console.log(allShelves)
 
   for (let i = 0; i < allShelves.length; i++) {
     allShelves[i].id = i;
 
   }
-  console.log(allShelves)
 }
 
 //compares variable to all ingredients, checks if it's in array and returns object value
@@ -57,42 +66,74 @@ function getItemValue(object) {
 };
 
 
-$('.item').click(function () {
-  let clickedObject = event.target.id
-  if (isHoldingObject == false && clickedObject != heldobject) {
-    isHoldingObject = true;
-    heldobject = event.target.id
-    console.log('clicked ' + heldobject + ", this is a new thing")
-  }
-  else if (clickedObject == heldobject){
-    console.log("clicked self")
-    if(hoveredObject == getItemValue(heldobject))
-    {
 
-      console.log("container object match")
+function itemLetGo() {
+  let itemIndex = getItemValue(heldobject)
+  isHoldingObject = false;
+
+
+  let startingLeft = ingredientList[itemIndex].startingPosition_L
+  let startingTop = ingredientList[itemIndex].startingPosition_T
+
+  $("#" + heldobject).css("left", startingLeft + "px")
+  $("#" + heldobject).css("top", startingTop + "px")
+  heldobject = null;
+
+}
+
+
+function checkIngredient(ing) {
+  console.log("checking ingredient")
+ console.log(recipies[activeRecipie].ingredients.length)
+  for (let i = 0; i < recipies[activeRecipie].ingredients.length; i++) {
+    if(ing == recipies[activeRecipie].ingredients[i]){
+      console.log("HUZZAH")
+      return
     }
-    else{
-      console.log("container object not match")
-    }
+  }
+
+}
+
+
+
+$(".shelf_container").click(function () {
+
+  console.log("container clicked")
+
+  if (isHoldingObject == false) {
+    heldobject = this.querySelector(".item").id
+    console.log("held object ID: " + getItemValue(heldobject) + " and container id: " + this.id)
+    isHoldingObject = true;
+  }
+  else if (isHoldingObject == true && getItemValue(heldobject) == this.id) {
 
     
+    itemLetGo();
+    isHoldingObject = false;
+  }
+  else if ((isHoldingObject == true && getItemValue(heldobject) != this.id)) {
+    console.log("wronc container!")
   }
 
-  }
-);
+});
 
-
-$(".shelf_container").hover(function () {
-  if (hoveredObject == null) {
-    hoveredObject = this.id
+$(".shaker").click(function () {
+  //get recipie
+  //check if ingredient same as recipie and not already done
+  //add ingredient to cup and mark as added ingredient
+  //put ingredient on back of shelf
   
 
+  if (isHoldingObject == true) {
+    checkIngredient(heldobject)
+    console.log("added ingredient: " + heldobject)
+    itemLetGo();
+
   }
-  else if (hoveredObject = ! null) {
-    hoveredObject = null
-  };
-  console.log(hoveredObject)
+
 });
+
+
 
 $(document).mousemove(function (event) {
 
@@ -112,21 +153,3 @@ $(document).keydown(function (event) {
 });
 
 
-function itemLetGo() {
-  let itemIndex = getItemValue(heldobject)
-  console.log(itemIndex)
-  isHoldingObject = false;
-
-
-
-  console.log("LEFT: " + ingredientList[itemIndex].startingPosition_L)
-  console.log("TOP: " + ingredientList[itemIndex].startingPosition_T)
-
-  let startingLeft = ingredientList[itemIndex].startingPosition_L
-  let startingTop = ingredientList[itemIndex].startingPosition_T
-
-  $("#" + heldobject).css("left", startingLeft + "px")
-  $("#" + heldobject).css("top", startingTop + "px")
-  heldobject = null;
-
-}

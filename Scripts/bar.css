@@ -17,6 +17,7 @@
 }
 
 .shelf_container {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,12 +27,27 @@
 
 }
 
+.counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(106, 61, 37);
+    height: 400px;
+}
+.shaker{
+    background-color: rgb(216, 189, 174);
+    height: 300px;
+    width: 100px;
+
+}
 
 
 .item {
+    pointer-events: none;
     height: 100px;
     width: 50px;
-    cursor: pointer;
+    
     position: absolute;
 }
 
@@ -62,8 +78,8 @@
     width: 50px;
 }
 
-#bitters {
-    background-color: rgb(111, 78, 45);
+#lj {
+    background-color: rgb(64, 201, 89);
     height: 50px;
     width: 50px;
 }

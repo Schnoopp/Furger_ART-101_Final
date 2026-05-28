@@ -27,27 +27,39 @@
 
 }
 
-.counter{
+.counter {
     display: flex;
-    flex-direction: column;
+    gap: 100px;
     justify-content: center;
     align-items: center;
     background-color: rgb(106, 61, 37);
     height: 400px;
 }
-.shaker{
-    background-color: rgb(216, 189, 174);
+
+.shaker {
+    background-color: rgb(48, 55, 79);
     height: 300px;
     width: 100px;
 
 }
 
+.menu {
+    background-color: rgb(216, 189, 174);
+    height: 350px;
+    width: 200px;
+}
+
+.glass{
+    background-color: rgb(203, 218, 220);
+    height: 350px;
+    width: 200px;
+}
 
 .item {
     pointer-events: none;
     height: 100px;
     width: 50px;
-    
+
     position: absolute;
 }
 
@@ -89,11 +101,13 @@
     height: 50px;
     width: 50px;
 }
+
 #tonic {
     background-color: rgb(202, 207, 209);
     height: 50px;
     width: 50px;
 }
+
 /*garnish ids*/
 
 #cherries {
@@ -101,16 +115,19 @@
     height: 25px;
     width: 25px;
 }
+
 #lime {
     background-color: rgb(47, 214, 28);
     height: 25px;
     width: 25px;
 }
+
 #salt {
     background-color: rgb(207, 209, 202);
     height: 25px;
     width: 25px;
 }
+
 #sugar {
     background-color: rgb(231, 244, 241);
     height: 25px;

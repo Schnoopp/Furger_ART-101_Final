@@ -2,19 +2,31 @@ let isHoldingObject = false;
 let heldobject;
 let ingredientList = [];
 let hoveredObject = null;
+let recipieInProgress
 
 const recipies = [];
 recipies.push({ name: "Screwdriver", ingredients: ["vodka", "oj"] })
 recipies.push({ name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries"] })
-recipies.push({ name: "Marg"["tequilla", "lj", "lime","salt"] })
+recipies.push({ name: "Marg", ingredients: ["tequilla", "lj", "lime", "salt"] })
+
 console.log(recipies)
+selectRecipie()
 
+function selectRecipie() {
+  let activeRecipie = Math.floor(Math.random() * (recipies.length));
+  recipieInProgress = recipies[activeRecipie]
+  console.log(recipieInProgress)
+  console.log(recipieInProgress.ingredients)
+  displayRecipie()
+};
 
-let activeRecipie = Math.floor(Math.random() * 2);
-console.log(activeRecipie)
-console.log(recipies[activeRecipie])
-console.log(recipies[activeRecipie].ingredients)
+function displayRecipie() {
 
+  for (let i = 0; i < recipieInProgress.ingredients.length; i++) {
+    $(".menu").append("<div>" + recipieInProgress.ingredients[i] + "</div>")
+    console.log("appended: " + recipieInProgress.ingredients[i])
+  }
+}
 
 
 getAllIngredients()
@@ -83,11 +95,13 @@ function itemLetGo() {
 
 
 function checkIngredient(ing) {
-  console.log("checking ingredient")
- console.log(recipies[activeRecipie].ingredients.length)
-  for (let i = 0; i < recipies[activeRecipie].ingredients.length; i++) {
-    if(ing == recipies[activeRecipie].ingredients[i]){
+  console.log(recipieInProgress.ingredients.length)
+
+  for (let i = 0; i < recipieInProgress.ingredients.length; i++) {
+
+    if (ing == recipieInProgress.ingredients[i]) {
       console.log("HUZZAH")
+      recipieInProgress.ingredients.splice(i)
       return
     }
   }
@@ -107,7 +121,7 @@ $(".shelf_container").click(function () {
   }
   else if (isHoldingObject == true && getItemValue(heldobject) == this.id) {
 
-    
+
     itemLetGo();
     isHoldingObject = false;
   }
@@ -122,7 +136,7 @@ $(".shaker").click(function () {
   //check if ingredient same as recipie and not already done
   //add ingredient to cup and mark as added ingredient
   //put ingredient on back of shelf
-  
+
 
   if (isHoldingObject == true) {
     checkIngredient(heldobject)

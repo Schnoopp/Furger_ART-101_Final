@@ -79,37 +79,6 @@ function getItemValue(object) {
 
 
 
-function itemLetGo() {
-  let itemIndex = getItemValue(heldobject)
-  isHoldingObject = false;
-
-
-  let startingLeft = ingredientList[itemIndex].startingPosition_L
-  let startingTop = ingredientList[itemIndex].startingPosition_T
-
-  $("#" + heldobject).css("left", startingLeft + "px")
-  $("#" + heldobject).css("top", startingTop + "px")
-  heldobject = null;
-
-}
-
-
-function checkIngredient(ing) {
-  console.log(recipieInProgress.ingredients.length)
-
-  for (let i = 0; i < recipieInProgress.ingredients.length; i++) {
-
-    if (ing == recipieInProgress.ingredients[i]) {
-      console.log("HUZZAH")
-      recipieInProgress.ingredients.splice(i)
-      return
-    }
-  }
-
-}
-
-
-
 $(".shelf_container").click(function () {
 
   console.log("container clicked")
@@ -131,6 +100,47 @@ $(".shelf_container").click(function () {
 
 });
 
+
+
+function itemLetGo() {
+  let itemIndex = getItemValue(heldobject)
+  isHoldingObject = false;
+
+
+  let startingLeft = ingredientList[itemIndex].startingPosition_L
+  let startingTop = ingredientList[itemIndex].startingPosition_T
+
+  $("#" + heldobject).css("left", startingLeft + "px")
+  $("#" + heldobject).css("top", startingTop + "px")
+  heldobject = null;
+
+}
+
+
+
+
+
+
+
+
+function checkIngredient(ing) {
+  console.log(recipieInProgress.ingredients.length)
+
+  for (let i = 0; i < recipieInProgress.ingredients.length; i++) {
+
+    if (ing == recipieInProgress.ingredients[i]) {
+      console.log("HUZZAH")
+      recipieInProgress.ingredients.splice(i)
+      return
+    }
+  }
+
+}
+
+
+
+
+
 $(".shaker").click(function () {
   //get recipie
   //check if ingredient same as recipie and not already done
@@ -149,6 +159,9 @@ $(".shaker").click(function () {
 
 
 
+
+
+// document bs
 $(document).mousemove(function (event) {
 
   if (isHoldingObject === true) {

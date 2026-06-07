@@ -3,7 +3,7 @@ body {
     margin: 0;
     height: 100%;
     overflow: hidden;
-    background-image: url(Images/bar_background.png);
+    background-image: url(/Images/bar_background.png);
     background-position: center;
 
 }
@@ -31,14 +31,14 @@ body {
     background-color: rgba(48, 17, 10, 0.401);
     height: 150px;
 
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .shelf_container {
     cursor: pointer;
     display: flex;
+    align-items: flex-end;
     justify-content: center;
-    align-items: center;
     background-color: rgba(34, 8, 1, 0.508);
     height: 250px;
     width: 150px;
@@ -80,140 +80,143 @@ body {
 
 .item {
     pointer-events: none;
-    height: 100px;
-    width: 50px;
-
+    height: 200px;
+    width: 125px;
+    align-items: last baseline;
+    justify-content: flex-end;
     position: absolute;
 }
 
+.image {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+
+
+}
 
 /*alc ids*/
 
 #vodka {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
 }
 
 #tequilla {
     background-color: rgb(244, 248, 217);
+
 }
 
 #rum {
     background-color: rgb(161, 121, 90);
+
 }
 
 #gin {
     background-color: rgb(75, 203, 220);
+
 }
 
 #whiskey {
     background-color: rgb(140, 9, 9);
+
 }
 
 /*mixers*/
 #grenadine {
     background-color: rgb(255, 0, 85);
-    height: 50px;
-    width: 50px;
+
 }
 
 
 #bitters {
     background-color: rgb(122, 67, 12);
-    height: 50px;
-    width: 50px;
+
+
+
 }
 
 #creamLiqueur {
     background-color: rgb(255, 229, 182);
-    height: 50px;
-    width: 50px;
+
 }
 
 #kahula {
     background-color: rgb(73, 24, 3);
-    height: 50px;
-    width: 50px;
+
 }
 
 #tripleSec {
     background-color: rgb(255, 89, 0);
-    height: 50px;
-    width: 50px;
+
 }
 
 /*Juice ids*/
 #tonic {
     background-color: rgba(27, 141, 255, 0.125);
-    height: 50px;
-    width: 50px;
+
 }
 
 #lemonJuice {
     background-color: rgb(250, 255, 115);
-    height: 50px;
-    width: 50px;
+
 }
 
 #limeJuice {
     background-color: rgb(78, 255, 107);
-    height: 50px;
-    width: 50px;
+
 }
 
 
 #orangeJuice {
     background-color: rgb(255, 128, 0);
-    height: 50px;
-    width: 50px;
+
+
 }
 
 #pineappleJuice {
     background-color: rgb(255, 225, 0);
-    height: 50px;
-    width: 50px;
+
 }
 
 #syrup {
     background-color: rgb(255, 255, 255);
-    height: 50px;
-    width: 50px;
+
 }
 
 /*garnish ids*/
 
 #cherries {
     background-color: rgb(141, 3, 3);
-    height: 25px;
-    width: 25px;
+
+
 }
 
 #lime {
     background-color: rgb(47, 214, 28);
-    height: 25px;
-    width: 25px;
+
 }
 
 #salt {
     background-color: rgb(207, 209, 202);
-    height: 25px;
-    width: 25px;
+
 }
 
 #sugar {
     background-color: rgb(231, 244, 241);
-    height: 25px;
-    width: 25px;
+
 }
 
 #mint {
     background-color: rgb(17, 139, 86);
-    height: 25px;
-    width: 25px;
+
 }
+
 #orangePeel {
     background-color: rgb(255, 102, 0);
-    height: 25px;
-    width: 25px;
+
 }
 
 

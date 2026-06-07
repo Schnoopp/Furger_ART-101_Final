@@ -143,9 +143,9 @@ body {
 
 /*Juice ids*/
 #tonic {
-    background-color: rgba(27, 255, 168, 0.41);
-    height: 25px;
-    width: 25px;
+    background-color: rgba(27, 141, 255, 0.125);
+    height: 50px;
+    width: 50px;
 }
 
 #lemonJuice {

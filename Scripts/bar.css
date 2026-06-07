@@ -1,19 +1,37 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../Images/bar_background.png);
+    background-position: center;
+
+}
+
+.spacer {
+    background-color: rgba(0, 255, 255, 0);
+
+}
+
 .bar_shelf {
+
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(62, 32, 16);
-    height: 800px;
+    align-items: center;
+
 }
 
 .shelf_row {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 0px;
     align-items: center;
-    background-color: rgb(48, 17, 10);
-    height: 200px;
-    margin: 25px;
+    background-color: rgba(48, 17, 10, 0.401);
+    height: 150px;
+
+    margin-top: 200px;
 }
 
 .shelf_container {
@@ -21,19 +39,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(34, 8, 1);
-    height: 175px;
-    width: 175px;
+    background-color: rgba(34, 8, 1, 0.508);
+    height: 250px;
+    width: 150px;
 
 }
 
 .counter {
+
     display: flex;
     gap: 100px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(106, 61, 37);
-    height: 400px;
+    background-color: rgba(180, 180, 180, 0);
+    margin: 50px;
+
+    height: auto;
+
 }
 
 .shaker {
@@ -45,11 +67,12 @@
 
 .menu {
     background-color: rgb(216, 189, 174);
-    height: 350px;
+    padding: 25px;
+    height: 300px;
     width: 200px;
 }
 
-.glass{
+.glass {
     background-color: rgb(203, 218, 220);
     height: 350px;
     width: 200px;
@@ -71,39 +94,87 @@
 }
 
 #tequilla {
-    background-color: rgb(199, 145, 74);
+    background-color: rgb(244, 248, 217);
 }
 
 #rum {
-    background-color: rgb(94, 46, 10);
+    background-color: rgb(161, 121, 90);
 }
 
 #gin {
     background-color: rgb(75, 203, 220);
 }
 
-/*syrups ids*/
+#whiskey {
+    background-color: rgb(140, 9, 9);
+}
 
+/*mixers*/
 #grenadine {
     background-color: rgb(255, 0, 85);
     height: 50px;
     width: 50px;
 }
 
-#lj {
-    background-color: rgb(64, 201, 89);
+
+#bitters {
+    background-color: rgb(122, 67, 12);
     height: 50px;
     width: 50px;
 }
 
-#oj {
+#creamLiqueur {
+    background-color: rgb(255, 229, 182);
+    height: 50px;
+    width: 50px;
+}
+
+#kahula {
+    background-color: rgb(73, 24, 3);
+    height: 50px;
+    width: 50px;
+}
+
+#tripleSec {
+    background-color: rgb(255, 89, 0);
+    height: 50px;
+    width: 50px;
+}
+
+/*Juice ids*/
+#tonic {
+    background-color: rgba(27, 255, 168, 0.41);
+    height: 25px;
+    width: 25px;
+}
+
+#lemonJuice {
+    background-color: rgb(250, 255, 115);
+    height: 50px;
+    width: 50px;
+}
+
+#limeJuice {
+    background-color: rgb(78, 255, 107);
+    height: 50px;
+    width: 50px;
+}
+
+
+#orangeJuice {
     background-color: rgb(255, 128, 0);
     height: 50px;
     width: 50px;
 }
 
-#tonic {
-    background-color: rgb(202, 207, 209);
+#pineappleJuice {
+    background-color: rgb(255, 225, 0);
+    height: 50px;
+    width: 50px;
+}
+
+#syrup {
+    background-color: rgb(255, 255, 255);
     height: 50px;
     width: 50px;
 }
@@ -134,8 +205,32 @@
     width: 25px;
 }
 
+#mint {
+    background-color: rgb(17, 139, 86);
+    height: 25px;
+    width: 25px;
+}
+#orangePeel {
+    background-color: rgb(255, 102, 0);
+    height: 25px;
+    width: 25px;
+}
 
 
-.following {
+
+
+#following {
     box-shadow: 0 0 20px black;
+}
+
+.label {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 12px;
+    width: 180px;
+    z-index: 3;
+    pointer-events: none;
 }

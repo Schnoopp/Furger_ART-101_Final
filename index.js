@@ -110,7 +110,9 @@ $(".shelf_container").click(function () {
 
   if (isHoldingObject == false) {
     heldobject = this.querySelector(".item").id
+
     console.log("held object ID: " + getItemValue(heldobject) + " and container id: " + this.id)
+    $("#"+heldobject).toggleClass("heldItem")
     isHoldingObject = true;
   }
   else if (isHoldingObject == true && getItemValue(heldobject) == this.id) {

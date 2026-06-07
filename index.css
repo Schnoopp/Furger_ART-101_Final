@@ -32,6 +32,7 @@ body {
     height: 150px;
 
     margin-top: 150px;
+    margin-bottom: 50px;
 }
 
 .shelf_container {
@@ -79,6 +80,7 @@ body {
 }
 
 .item {
+    
     pointer-events: none;
     height: 200px;
     width: 125px;
@@ -96,6 +98,9 @@ body {
     bottom: 0;
 
 
+}
+.heldItem{
+    z-index: 100;
 }
 
 /*alc ids*/

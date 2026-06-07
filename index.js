@@ -140,9 +140,6 @@ $(".shelf_container").hover(
 
       }
     }
-
-
-
   },
   function () {
 
@@ -151,10 +148,7 @@ $(".shelf_container").hover(
       if (label_show == false) {
         $(".label").stop(true, true).slideUp(300);
       }
-
     })
-
-
   }
 );
 
@@ -196,16 +190,11 @@ function checkIngredient(ing) {
 
 
 $(".shaker").click(function () {
-  //get recipie
-  //check if ingredient same as recipie and not already done
-  //add ingredient to cup and mark as added ingredient
-  //put ingredient on back of shelf
 
   if (isHoldingObject == true) {
     checkIngredient(heldobject)
     console.log("added ingredient: " + heldobject)
     itemLetGo();
-
   }
 
 });
@@ -218,8 +207,8 @@ $("#done").click(function () {
     console.log("dumbass your drink not done")
   )
 
-
 });
+
 
 
 function compareArrays(arr1, arr2) {

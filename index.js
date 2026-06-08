@@ -79,12 +79,9 @@ $(".drinkDisplay").click(function () {
 })
 
 
-console.log(recipies)
-selectRecipie()
-
-
 function selectRecipie(selectedDrink) {
   activeRecipie = recipies[getItemValue(selectedDrink,recipies)]
+
   console.log(activeRecipie)
   console.log(activeRecipie.ingredients)
   displayRecipie(activeRecipie)
@@ -115,8 +112,8 @@ function getAllIngredients() {
 
     const ingredient = {
       name: allIngredients[i].id,
-      startingPosition_L: left,
-      startingPosition_T: top
+      startingPosition_L: $(".background").left,
+      startingPosition_T:$(".background").top,
     }
 
     ingredientList.push(ingredient);

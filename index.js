@@ -112,8 +112,8 @@ function getAllIngredients() {
 
     const ingredient = {
       name: allIngredients[i].id,
-      startingPosition_L: $(".background").left,
-      startingPosition_T:$(".background").top,
+      startingPosition_L: left,
+      startingPosition_T:top,
     }
 
     ingredientList.push(ingredient);

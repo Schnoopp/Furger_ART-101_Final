@@ -72,8 +72,10 @@ $("#rightButton").click(function () {
 
 $(".drinkDisplay").click(function () {
   console.log("drink clicked: " + this.id)
+  selectRecipie(this.id)
 
-  selectRecipie()
+  $(".recipieWindow").css("display", "none")
+
 })
 
 
@@ -82,7 +84,7 @@ selectRecipie()
 
 
 function selectRecipie(selectedDrink) {
-  activeRecipie = 
+  activeRecipie = recipies[getItemValue(selectedDrink,recipies)]
   console.log(activeRecipie)
   console.log(activeRecipie.ingredients)
   displayRecipie(activeRecipie)
@@ -134,9 +136,9 @@ function GetAllShelves() {
 
 //compares variable to all ingredients, checks if it's in array and returns object value
 function getItemValue(object,list) {
-  for (let i = 0; i < ingredientList.length; i++) {
+  for (let i = 0; i < list.length; i++) {
 
-    if (object == ingredientList[i].name) {
+    if (object == list[i].name) {
       console.log("item found, value is: " + i)
       return i
     };
@@ -153,17 +155,17 @@ $(".shelf_container").click(function () {
   if (isHoldingObject == false) {
     heldobject = this.querySelector(".item").id
 
-    console.log("held object ID: " + getItemValue(heldobject) + " and container id: " + this.id)
+    console.log("held object ID: " + getItemValue(heldobject,ingredientList) + " and container id: " + this.id)
     $("#" + heldobject).css('z-index', 100)
     isHoldingObject = true;
   }
-  else if (isHoldingObject == true && getItemValue(heldobject) == this.id) {
+  else if (isHoldingObject == true && getItemValue(heldobject,ingredientList) == this.id) {
 
 
     itemLetGo();
     isHoldingObject = false;
   }
-  else if ((isHoldingObject == true && getItemValue(heldobject) != this.id)) {
+  else if ((isHoldingObject == true && getItemValue(heldobject,ingredientList) != this.id)) {
     console.log("wronc container!")
   }
 
@@ -197,7 +199,7 @@ $(".shelf_container").hover(
 
 
 function itemLetGo() {
-  let itemIndex = getItemValue(heldobject)
+  let itemIndex = getItemValue(heldobject,ingredientList)
   isHoldingObject = false;
   $("#" + heldobject).css('z-index', 0)
 

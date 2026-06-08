@@ -74,7 +74,7 @@ $(".drinkDisplay").click(function () {
   console.log("drink clicked: " + this.id)
   selectRecipie(this.id)
 
-  $(".recipieWindow").css("display", "none")
+  $(".recipieWindow").css("display", "none", "pointer-events", "none")
 
 })
 

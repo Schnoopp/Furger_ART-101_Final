@@ -205,6 +205,7 @@ function itemLetGo() {
 
   $("#" + heldobject).css("left", startingLeft + "px")
   $("#" + heldobject).css("top", startingTop + "px")
+  $("#" + heldobject).css("position", "absolute")
   heldobject = null;
 
 }
@@ -284,8 +285,8 @@ $(document).mousemove(function (event) {
 
   if (isHoldingObject === true) {
     $("#" + heldobject).css({
-      left: event.pageX - $("body").offset().left,
-      top: event.pageY - $("body").offset().top
+      left: event.pageX - $(".background").offset().left,
+      top: event.pageY - $(".background").offset().top
     });
   }
 });

@@ -112,7 +112,7 @@ $(".shelf_container").click(function () {
     heldobject = this.querySelector(".item").id
 
     console.log("held object ID: " + getItemValue(heldobject) + " and container id: " + this.id)
-    $("#"+heldobject).toggleClass("heldItem")
+    $("#" + heldobject).css('z-index', 100)
     isHoldingObject = true;
   }
   else if (isHoldingObject == true && getItemValue(heldobject) == this.id) {
@@ -157,7 +157,7 @@ $(".shelf_container").hover(
 function itemLetGo() {
   let itemIndex = getItemValue(heldobject)
   isHoldingObject = false;
-
+  $("#" + heldobject).css('z-index', 0)
 
   let startingLeft = ingredientList[itemIndex].startingPosition_L
   let startingTop = ingredientList[itemIndex].startingPosition_T
@@ -203,12 +203,11 @@ $("#done").click(function () {
   if (compareArrays(drinkInProgress, activeRecipie.ingredients) == true) {
     console.log("ALLDONE")
   }
-  else(
+  else (
     console.log("dumbass your drink not done")
   )
 
 });
-
 
 
 function compareArrays(arr1, arr2) {
@@ -244,8 +243,8 @@ $(document).mousemove(function (event) {
 
   if (isHoldingObject === true) {
     $("#" + heldobject).css({
-      left: event.pageX - $(".bar_shelf").offset().left,
-      top: event.pageY - $(".bar_shelf").offset().top
+      left: event.pageX - $(".background").offset().left,
+      top: event.pageY - $(".background").offset().top
     });
   }
 });

@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 1480px;
-    height: 1020px;
+    height: 1080px;
     margin: auto;
 
 }
@@ -35,7 +35,8 @@ body {
     align-items: center;
     background-color: rgba(48, 17, 10, 0.401);
     height: 200px;
-    width: 100%;
+    width: 80%;
+
 
 
 }
@@ -47,7 +48,17 @@ body {
     justify-content: center;
     background-color: rgba(34, 8, 1, 0.508);
     height: 100%;
-    width: 1920px;
+    width: 100vw;
+
+}
+.menu_container {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(34, 8, 1, 0.508);
+    height: 100%;
+    width: 100vw;
 
 }
 
@@ -79,10 +90,12 @@ body {
 }
 
 .menu {
-    background-image: url("Images/menu.png");
-    margin-top: 50px;
-    width: 300px;
-    height: 300px;
+
+    height: 200px;
+    width: 125px;
+    align-items: last baseline;
+    justify-content: flex-end;
+    position: absolute;
 }
 
 .glass {
@@ -92,7 +105,6 @@ body {
 }
 
 .item {
-
     pointer-events: none;
     height: 200px;
     width: 125px;
@@ -116,6 +128,15 @@ body {
     z-index: 100;
 }
 
+.spacer {
+    height: 150px;
+    width: 100%;
+}
+
+.spacer2 {
+    height: 80px;
+    width: 100%;
+}
 
 
 /*alc ids*/

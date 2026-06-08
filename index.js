@@ -243,8 +243,8 @@ $(document).mousemove(function (event) {
 
   if (isHoldingObject === true) {
     $("#" + heldobject).css({
-      left: event.pageX - $(".background").offset().left,
-      top: event.pageY - $(".background").offset().top
+      left: event.pageX - $("body").offset().left,
+      top: event.pageY - $("body").offset().top
     });
   }
 });

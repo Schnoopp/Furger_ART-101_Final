@@ -59,6 +59,7 @@ body {
     background-color: rgba(34, 8, 1, 0.508);
     height: 100%;
     width: 100vw;
+    margin-top: 50px;
 
 }
 
@@ -90,9 +91,9 @@ body {
 }
 
 .menu {
-
-    height: 200px;
-    width: 125px;
+    margin-top: 50px;
+    height: 300px;
+    width: 300px;
     align-items: last baseline;
     justify-content: flex-end;
     position: absolute;

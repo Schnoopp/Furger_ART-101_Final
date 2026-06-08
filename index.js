@@ -10,31 +10,34 @@ function delay(ms) {
 }
 
 const recipies = [];
-recipies.push({ menuenum: 1, name: "Screwdriver", ingredients: ["vodka", "orangeJuice"], image: "Images/Drinks/ColinsGlass/Screwdriver.png" })
-recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"], image: "Images/Drinks/ColinsGlass/DirtyShirley.png"  })
-recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"], image: "Images/Drinks/MartiniGlass/LemonDrop.png" })
-recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"],image: "Images/Drinks/RocksGlass/WhiteRussian.png" })
+recipies.push({ menuenum: 1, name: "Screwdriver", ingredients: ["vodka", "orangeJuice"], image: "Images/Drinks/ColinsGlass/Screwdriver.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"], image: "Images/Drinks/ColinsGlass/DirtyShirley.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"], image: "Images/Drinks/MartiniGlass/LemonDrop.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"], image: "Images/Drinks/RocksGlass/WhiteRussian.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 
-recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"],image: "Images/Drinks/MartiniGlass/Margarita.png" })
-recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png" })
-recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"],image: "Images/Drinks/MartiniGlass/EspressoMartini.png" })
-recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png" })
+recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"], image: "Images/Drinks/MartiniGlass/Margarita.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"], image: "Images/Drinks/MartiniGlass/EspressoMartini.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
 
-recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"],image: "Images/Drinks/RocksGlass/GinAndTonic.png" })
-recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"],image: "Images/Drinks/MartiniGlass/Gimlet.png" })
-recipies.push({ menuenum: 3, name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"], image: "Images/Drinks/ColinsGlass/TomCollins.png" })
-recipies.push({ menuenum: 3, name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"], image: "Images/Drinks/MartiniGlass/GinSour.png" })
+recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"], image: "Images/Drinks/RocksGlass/GinAndTonic.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
+recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"], image: "Images/Drinks/MartiniGlass/Gimlet.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 3, name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"], image: "Images/Drinks/ColinsGlass/TomCollins.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 3, name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"], image: "Images/Drinks/MartiniGlass/GinSour.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
 
-recipies.push({ menuenum: 4, name: "Mojito", ingredients: ["rum", "limeJuice", "mint", "sugar", "tonic"], image: "Images/Drinks/ColinsGlass/Mojito.png" })
-recipies.push({ menuenum: 4, name: "Bahama Mama", ingredients: ["rum", "kahula", "pineappleJuice", "cherries"], image: "Images/Drinks/ColinsGlass/BahamaMama.png" })
-recipies.push({ menuenum: 4, name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"], image: "Images/Drinks/MartiniGlass/Daiquiri.png"  })
-recipies.push({ menuenum: 4, name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"], image: "Images/Drinks/RocksGlass/MaiTai.png" })
+recipies.push({ menuenum: 4, name: "Mojito", ingredients: ["rum", "limeJuice", "mint", "sugar", "tonic"], image: "Images/Drinks/ColinsGlass/Mojito.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 4, name: "Bahama Mama", ingredients: ["rum", "kahula", "pineappleJuice", "cherries"], image: "Images/Drinks/ColinsGlass/BahamaMama.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 4, name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"], image: "Images/Drinks/MartiniGlass/Daiquiri.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 4, name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"], image: "Images/Drinks/RocksGlass/MaiTai.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 
-recipies.push({ menuenum: 5, name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"],image: "Images/Drinks/RocksGlass/OldFashioned.png" })
-recipies.push({ menuenum: 5, name: "Revolver", ingredients: ["whiskey", "kahula", "bitters"] })
-recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "triplesec",], image: "Images/Drinks/RocksGlass/B52.png" })
-recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"], image: "Images/Drinks/RocksGlass/WhiskeySour.png" })
+recipies.push({ menuenum: 5, name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"], image: "Images/Drinks/RocksGlass/OldFashioned.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
+recipies.push({ menuenum: 5, name: "Revolver", ingredients: ["whiskey", "kahula", "bitters"], image: "Images/Drinks/MartiniGlass/Revolver.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "tripleSec",], image: "Images/Drinks/RocksGlass/B52.png", glassImage: "Images/Drinks/RocksGlass/ShotGlass.png" })
+recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"], image: "Images/Drinks/RocksGlass/WhiskeySour.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 
+getAllIngredients()
+GetAllShelves()
+menuDisplay();
 
 function menuDisplay() {
   $('.recipieSheetText').html("")
@@ -50,7 +53,6 @@ function menuDisplay() {
   }
 }
 
-menuDisplay();
 
 $("#leftButton").click(function () {
   if (menuenumber > 1) {
@@ -79,30 +81,35 @@ $(".recipieSheetText").on("click", ".drinkDisplay", function () {
 
 $(".drinkDisplay").click(function () {
 
-
 })
-
 
 
 function selectRecipie(selectedDrink) {
   activeRecipie = recipies[getItemValue(selectedDrink, recipies)]
-
-  console.log(activeRecipie)
-  console.log(activeRecipie.ingredients)
   displayRecipie(activeRecipie)
+
+  drinkInProgress = [];
+
+
 };
 
 function displayRecipie(recipie) {
+  $("#menuText").html("")
   $("#menuText").append("<div>" + recipie.name + ": </div>" + "<p>ingredients: </p>")
   for (let i = 0; i < recipie.ingredients.length; i++) {
     $("#menuText").append("<div>" + recipie.ingredients[i] + "</div>")
     console.log("appended: " + recipie.ingredients[i])
   }
+  $(".glass").html('<img src="' + recipie.glassImage + '" , class="glassImage">');
 }
 
+$(".menu_container").click(function () {
 
-getAllIngredients()
-GetAllShelves()
+  $(".recipieWindow").css("display", "flex", "pointer-events", "all")
+
+});
+
+
 
 // collects all objects of class item, creates an array of ingredients: name, position values
 function getAllIngredients() {
@@ -216,23 +223,18 @@ function itemLetGo() {
 }
 
 
-
 function checkIngredient(ing) {
   console.log(activeRecipie.ingredients.length)
-
-  for (let i = 0; i < activeRecipie.ingredients.length; i++) {
-
-    if (ing == activeRecipie.ingredients[i]) {
+  if (activeRecipie.ingredients.includes(ing)) {
+    if (!drinkInProgress.includes(ing)) {
+      console.log("ingredient found")
       console.log("HUZZAH")
       drinkInProgress.push(heldobject);
       console.log(drinkInProgress)
-
-      return
     }
   }
+
 }
-
-
 
 
 
@@ -249,6 +251,7 @@ $(".shaker").click(function () {
 $("#done").click(function () {
   if (compareArrays(drinkInProgress, activeRecipie.ingredients) == true) {
     console.log("ALLDONE")
+    $(".glass").html('<img src="' + activeRecipie.image + '" , class="glassImage">');
   }
   else (
     console.log("dumbass your drink not done")

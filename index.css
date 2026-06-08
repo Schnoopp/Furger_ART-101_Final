@@ -4,7 +4,6 @@ body {
 
 .background {
 
-
     background-image: url('Images/bar_background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,8 +12,6 @@ body {
     height: 880px;
     margin: auto;
 
-    justify-content: center;
-    align-items: center;
 
 }
 
@@ -115,11 +112,11 @@ body {
     cursor: pointer;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
     background-color: rgba(34, 8, 1, 0.508);
     height: 100%;
     width: 100vw;
     margin-top: 50px;
+    margin-right:400px;
 
 }
 
@@ -131,16 +128,19 @@ body {
     align-items: center;
     background-color: rgba(180, 180, 180, 0);
     margin: 50px;
-
+    width: 500px;
     height: auto;
 
 }
 
 .shaker {
-    background-color: rgb(48, 55, 79);
+    display: flex;
+    background-color: rgb(203, 218, 220);
+
     height: 200px;
-    width: 100px;
-    margin-bottom: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -153,18 +153,29 @@ body {
 }
 
 .menu {
-    margin-top: 50px;
+    position: absolute;
     height: 250px;
     width: 250px;
-    align-items: last baseline;
-    justify-content: flex-end;
-    position: absolute;
+    z-index: -0;
 }
 
 .glass {
+    display: flex;
     background-color: rgb(203, 218, 220);
+    pointer-events: none;
     height: 200px;
-    width: 100px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.glassImage {
+    height: auto;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
 .item {
@@ -174,6 +185,7 @@ body {
     align-items: last baseline;
     justify-content: flex-end;
     position: absolute;
+
 }
 
 .image {

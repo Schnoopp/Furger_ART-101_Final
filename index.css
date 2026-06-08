@@ -4,7 +4,8 @@ body {
 }
 
 .background {
-    position: relative;
+
+
     background-image: url('Images/bar_background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,6 +17,7 @@ body {
     align-items: center;
 
 }
+
 
 .recipieWindow {
     

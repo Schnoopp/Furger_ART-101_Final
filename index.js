@@ -2,7 +2,7 @@ let isHoldingObject = false;
 let heldobject;
 let ingredientList = [];
 let activeRecipie;
-
+let menuenumber = 1;
 let drinkInProgress = [];
 
 function delay(ms) {
@@ -10,37 +10,79 @@ function delay(ms) {
 }
 
 const recipies = [];
-recipies.push({ name: "Screwdriver", ingredients: ["vodka", "orangeJuice"] })
-recipies.push({ name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"] })
-recipies.push({ name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"] })
-recipies.push({ name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"] })
+recipies.push({ menuenum: 1, name: "Screwdriver", ingredients: ["vodka", "orangeJuice"], image: "Images/Drinks/ColinsGlass/Screwdriver.png" })
+recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"] })
+recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"] })
+recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"] })
 
-recipies.push({ name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"] })
-recipies.push({ name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"] })
-recipies.push({ name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"] })
-recipies.push({ name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"] })
+recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"] })
+recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png" })
+recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"] })
+recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png" })
 
-recipies.push({ name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"] })
-recipies.push({ name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"] })
-recipies.push({ name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"] })
-recipies.push({ name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"] })
+recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"] })
+recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"] })
+recipies.push({ menuenum: 3, name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"] })
+recipies.push({ menuenum: 3, name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"] })
 
-recipies.push({ name: "Mojito", ingredients: ["rum", "limeJuice", "mint", "sugar", "tonic"] })
-recipies.push({ name: "Bahama Mama", ingredients: ["rum", "kahula", "pineappleJuice", "cherries"] })
-recipies.push({ name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"] })
-recipies.push({ name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"] })
+recipies.push({ menuenum: 4, name: "Mojito", ingredients: ["rum", "limeJuice", "mint", "sugar", "tonic"], image: "Images/Drinks/ColinsGlass/Mojito.png" })
+recipies.push({ menuenum: 4, name: "Bahama Mama", ingredients: ["rum", "kahula", "pineappleJuice", "cherries"], image: "Images/Drinks/ColinsGlass/BahamaMama.png" })
+recipies.push({ menuenum: 4, name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"] })
+recipies.push({ menuenum: 4, name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"] })
 
-recipies.push({ name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"] })
-recipies.push({ name: "Revolver", ingredients: ["whiskey", "kahula", "bitters"] })
-recipies.push({ name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "triplesec"] })
-recipies.push({ name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"] })
+recipies.push({ menuenum: 5, name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"] })
+recipies.push({ menuenum: 5, name: "Revolver", ingredients: ["whiskey", "kahula", "bitters"] })
+recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "triplesec"] })
+recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"] })
+
+
+function menuDisplay() {
+  $('.recipieSheetText').html("")
+  for (let i = 0; i < recipies.length; i++) {
+    if (recipies[i].menuenum == menuenumber) {
+
+
+
+      console.log(recipies[i])
+      let drinkPic = recipies[i].image
+
+      $('.recipieSheetText').append('<div class="drinkDisplay", id = "'+recipies[i].name+'"><img src="' + drinkPic + '" , class="image">' + recipies[i].name + '</div>')
+    }
+  }
+}
+
+menuDisplay();
+
+$("#leftButton").click(function () {
+  if (menuenumber > 1) {
+    menuenumber -= 1
+    console.log(menuenumber)
+    menuDisplay()
+  }
+})
+
+
+$("#rightButton").click(function () {
+  if (menuenumber < 5) {
+    menuenumber += 1
+    console.log(menuenumber)
+    menuDisplay()
+  }
+})
+
+$(".drinkDisplay").click(function () {
+  console.log("drink clicked: " + this.id)
+
+  selectRecipie()
+})
+
 
 console.log(recipies)
 selectRecipie()
 
 
-function selectRecipie() {
-  activeRecipie = recipies[Math.floor(Math.random() * (recipies.length))]
+function selectRecipie(selectedDrink) {
+  activeRecipie = 
   console.log(activeRecipie)
   console.log(activeRecipie.ingredients)
   displayRecipie(activeRecipie)
@@ -91,7 +133,7 @@ function GetAllShelves() {
 }
 
 //compares variable to all ingredients, checks if it's in array and returns object value
-function getItemValue(object) {
+function getItemValue(object,list) {
   for (let i = 0; i < ingredientList.length; i++) {
 
     if (object == ingredientList[i].name) {

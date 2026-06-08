@@ -4,8 +4,7 @@ body {
 }
 
 .background {
-
-
+    position: relative;
     background-image: url('Images/bar_background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,8 +17,65 @@ body {
 
 }
 
+.recipieWindow {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(52, 96, 97, 0.516);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    text-align: center;
+}
+
+.recipieSheet {
+    background-color: rgb(251, 250, 194);
+    height: 90%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border: 5px solid rgb(0, 221, 255);
+    border-radius: 10px;
+}
+
+.recipieSheetText {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.drinkDisplay {
+
+    cursor: pointer;
+    height: 300px;
+    width: 100%;
+    align-items: last baseline;
+    justify-content: flex-end;
+    position: relative;
+    background-color: rgba(9, 186, 186, 0.508);
+}
+
 .bar_shelf {
-        justify-content: center;
+    justify-content: center;
     align-items: center;
     position: inherit;
     display: flex;
@@ -41,8 +97,6 @@ body {
     height: 150px;
     width: 80%;
 
-
-
 }
 
 .shelf_container {
@@ -55,6 +109,7 @@ body {
     width: 100vw;
 
 }
+
 .menu_container {
     cursor: pointer;
     display: flex;
@@ -124,9 +179,11 @@ body {
     display: block;
     margin: 0 auto;
     height: auto;
-    width: 100%;
+    width: 90%;
+    height: auto;
     position: absolute;
     bottom: 0;
+    z-index: 20;
 
 
 }

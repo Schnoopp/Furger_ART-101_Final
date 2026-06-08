@@ -13,10 +13,14 @@ body {
     width: 1280px;
     height: 880px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .bar_shelf {
+        justify-content: center;
+    align-items: center;
     position: inherit;
     display: flex;
     flex-direction: column;
@@ -34,7 +38,7 @@ body {
     gap: 0px;
     align-items: center;
     background-color: rgba(48, 17, 10, 0.401);
-    height: 200px;
+    height: 150px;
     width: 80%;
 
 
@@ -66,7 +70,7 @@ body {
 .counter {
 
     display: flex;
-    gap: 100px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     background-color: rgba(180, 180, 180, 0);
@@ -78,22 +82,24 @@ body {
 
 .shaker {
     background-color: rgb(48, 55, 79);
-    height: 300px;
+    height: 200px;
     width: 100px;
+    margin-bottom: 50px;
 
 }
 
 .recipieList {
     background-color: rgb(216, 189, 174);
     padding: 25px;
-    height: 300px;
-    width: 200px;
+    height: 200px;
+    width: 100px;
+    margin-bottom: 50px;
 }
 
 .menu {
     margin-top: 50px;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     align-items: last baseline;
     justify-content: flex-end;
     position: absolute;
@@ -101,14 +107,14 @@ body {
 
 .glass {
     background-color: rgb(203, 218, 220);
-    height: 350px;
-    width: 200px;
+    height: 200px;
+    width: 100px;
 }
 
 .item {
     pointer-events: none;
-    height: 200px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     align-items: last baseline;
     justify-content: flex-end;
     position: absolute;
@@ -269,6 +275,8 @@ body {
 }
 
 .label {
+    margin: auto;
+    justify-content: center;
     display: none;
     position: absolute;
     background: white;

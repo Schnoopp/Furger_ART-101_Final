@@ -11,42 +11,41 @@ function delay(ms) {
 
 const recipies = [];
 recipies.push({ menuenum: 1, name: "Screwdriver", ingredients: ["vodka", "orangeJuice"], image: "Images/Drinks/ColinsGlass/Screwdriver.png" })
-recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"] })
-recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"] })
-recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"] })
+recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"], image: "Images/Drinks/ColinsGlass/DirtyShirley.png"  })
+recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"], image: "Images/Drinks/MartiniGlass/LemonDrop.png" })
+recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"],image: "Images/Drinks/RocksGlass/WhiteRussian.png" })
 
-recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"] })
+recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"],image: "Images/Drinks/MartiniGlass/Margarita.png" })
 recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png" })
-recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"] })
+recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"],image: "Images/Drinks/MartiniGlass/EspressoMartini.png" })
 recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png" })
 
-recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"] })
-recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"] })
-recipies.push({ menuenum: 3, name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"] })
-recipies.push({ menuenum: 3, name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"] })
+recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"],image: "Images/Drinks/RocksGlass/GinAndTonic.png" })
+recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"],image: "Images/Drinks/MartiniGlass/Gimlet.png" })
+recipies.push({ menuenum: 3, name: "Tom Collins", ingredients: ["gin", "lemonJuice", "syrup", "tonic", "cherries"], image: "Images/Drinks/ColinsGlass/TomCollins.png" })
+recipies.push({ menuenum: 3, name: "Gin Sour", ingredients: ["gin", "lemonJuice", "syrup", "bitters"], image: "Images/Drinks/MartiniGlass/GinSour.png" })
 
 recipies.push({ menuenum: 4, name: "Mojito", ingredients: ["rum", "limeJuice", "mint", "sugar", "tonic"], image: "Images/Drinks/ColinsGlass/Mojito.png" })
 recipies.push({ menuenum: 4, name: "Bahama Mama", ingredients: ["rum", "kahula", "pineappleJuice", "cherries"], image: "Images/Drinks/ColinsGlass/BahamaMama.png" })
-recipies.push({ menuenum: 4, name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"] })
-recipies.push({ menuenum: 4, name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"] })
+recipies.push({ menuenum: 4, name: "Daquiri", ingredients: ["rum", "limeJuice", "sugar", "syrup"], image: "Images/Drinks/MartiniGlass/Daiquiri.png"  })
+recipies.push({ menuenum: 4, name: "Mai Tai", ingredients: ["rum", "tripleSec", "pineappleJuice", "orangeJuice", "syrup", "grenadine"], image: "Images/Drinks/RocksGlass/MaiTai.png" })
 
-recipies.push({ menuenum: 5, name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"] })
+recipies.push({ menuenum: 5, name: "Old Fashioned", ingredients: ["whiskey", "syrup", "bitters", "cherries"],image: "Images/Drinks/RocksGlass/OldFashioned.png" })
 recipies.push({ menuenum: 5, name: "Revolver", ingredients: ["whiskey", "kahula", "bitters"] })
-recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "triplesec"] })
-recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"] })
+recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "triplesec",], image: "Images/Drinks/RocksGlass/B52.png" })
+recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"], image: "Images/Drinks/RocksGlass/WhiskeySour.png" })
 
 
 function menuDisplay() {
   $('.recipieSheetText').html("")
   for (let i = 0; i < recipies.length; i++) {
     if (recipies[i].menuenum == menuenumber) {
-
-
-
       console.log(recipies[i])
       let drinkPic = recipies[i].image
 
-      $('.recipieSheetText').append('<div class="drinkDisplay", id = "'+recipies[i].name+'"><img src="' + drinkPic + '" , class="image">' + recipies[i].name + '</div>')
+      $('.recipieSheetText').append('<div class="drinkDisplay", id = "' + recipies[i].name + '"><img src="' + drinkPic + '" , class="menuImage">' + recipies[i].name + '</div>')
+
+
     }
   }
 }
@@ -57,7 +56,8 @@ $("#leftButton").click(function () {
   if (menuenumber > 1) {
     menuenumber -= 1
     console.log(menuenumber)
-    menuDisplay()
+    menuDisplay();
+
   }
 })
 
@@ -66,21 +66,26 @@ $("#rightButton").click(function () {
   if (menuenumber < 5) {
     menuenumber += 1
     console.log(menuenumber)
-    menuDisplay()
+    menuDisplay();
   }
 })
-
-$(".drinkDisplay").click(function () {
+$(".recipieSheetText").on("click", ".drinkDisplay", function () {
   console.log("drink clicked: " + this.id)
   selectRecipie(this.id)
 
   $(".recipieWindow").css("display", "none", "pointer-events", "none")
+});
+
+
+$(".drinkDisplay").click(function () {
+
 
 })
 
 
+
 function selectRecipie(selectedDrink) {
-  activeRecipie = recipies[getItemValue(selectedDrink,recipies)]
+  activeRecipie = recipies[getItemValue(selectedDrink, recipies)]
 
   console.log(activeRecipie)
   console.log(activeRecipie.ingredients)
@@ -113,7 +118,7 @@ function getAllIngredients() {
     const ingredient = {
       name: allIngredients[i].id,
       startingPosition_L: left,
-      startingPosition_T:top,
+      startingPosition_T: top,
     }
 
     ingredientList.push(ingredient);
@@ -132,7 +137,7 @@ function GetAllShelves() {
 }
 
 //compares variable to all ingredients, checks if it's in array and returns object value
-function getItemValue(object,list) {
+function getItemValue(object, list) {
   for (let i = 0; i < list.length; i++) {
 
     if (object == list[i].name) {
@@ -152,17 +157,17 @@ $(".shelf_container").click(function () {
   if (isHoldingObject == false) {
     heldobject = this.querySelector(".item").id
 
-    console.log("held object ID: " + getItemValue(heldobject,ingredientList) + " and container id: " + this.id)
+    console.log("held object ID: " + getItemValue(heldobject, ingredientList) + " and container id: " + this.id)
     $("#" + heldobject).css('z-index', 100)
     isHoldingObject = true;
   }
-  else if (isHoldingObject == true && getItemValue(heldobject,ingredientList) == this.id) {
+  else if (isHoldingObject == true && getItemValue(heldobject, ingredientList) == this.id) {
 
 
     itemLetGo();
     isHoldingObject = false;
   }
-  else if ((isHoldingObject == true && getItemValue(heldobject,ingredientList) != this.id)) {
+  else if ((isHoldingObject == true && getItemValue(heldobject, ingredientList) != this.id)) {
     console.log("wronc container!")
   }
 
@@ -196,7 +201,7 @@ $(".shelf_container").hover(
 
 
 function itemLetGo() {
-  let itemIndex = getItemValue(heldobject,ingredientList)
+  let itemIndex = getItemValue(heldobject, ingredientList)
   isHoldingObject = false;
   $("#" + heldobject).css('z-index', 0)
 
@@ -285,8 +290,8 @@ $(document).mousemove(function (event) {
 
   if (isHoldingObject === true) {
     $("#" + heldobject).css({
-      left: event.pageX - $(".background").offset().left,
-      top: event.pageY - $(".background").offset().top
+      left: event.pageX - $("body").offset().left,
+      top: event.pageY - $("body").offset().top
     });
   }
 });

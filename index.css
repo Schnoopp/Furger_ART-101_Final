@@ -1,6 +1,4 @@
 body {
-    justify-content: center;
-    align-items: center;
 }
 
 .background {
@@ -13,6 +11,7 @@ body {
     width: 1280px;
     height: 880px;
     margin: auto;
+    
     justify-content: center;
     align-items: center;
 
@@ -21,8 +20,7 @@ body {
 
 .recipieWindow {
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     background-color: rgba(52, 96, 97, 0.516);
     height: 100%;
     width: 100%;
@@ -37,13 +35,13 @@ body {
 
 .recipieSheet {
     background-color: rgb(251, 250, 194);
-    height: 80%;
-    width: 50%;
+    height: 70%;
+
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+  
     left: 0;
     right: 0;
     text-align: center;
@@ -53,14 +51,14 @@ body {
 
 .recipieSheetText {
     display: grid;
-    gap: 20px;
+    gap: 50px;
+    padding: 50px;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     place-items: center;
-    padding: 10px;
     grid-template-columns: repeat(2, 1fr);
 
 }
@@ -68,8 +66,8 @@ body {
 .drinkDisplay {
 
     cursor: pointer;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     align-items: last baseline;
     justify-content: flex-end;
     position: relative;
@@ -200,15 +198,40 @@ body {
     bottom: 0;
     z-index: 20;
 
+}
+
+.menuTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
 
 }
 
-.leftButton {
-    margin: 0 auto;
+#leftButton {
+    margin-right: 100px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: last baseline;
+    justify-content: flex-end;
+
 }
 
-.rightButton {
-    margin: 0 auto;
+#rightButton {
+    margin-left: 100px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: last baseline;
+    justify-content: flex-end;
+
 }
 
 .heldItem {

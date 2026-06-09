@@ -233,8 +233,12 @@ function itemLetGo() {
   console.log(htmlContent)
   $("#" + itemIndex).html("")
   $("#" + itemIndex).html(htmlContent)
-  $("#" + heldobject).css("left", 0,)
-  $("#" + heldobject).css("top", 0,)
+  let startingLeft = ingredientList[itemIndex].startingPosition_L
+  let startingTop = ingredientList[itemIndex].startingPosition_T
+
+  $("#" + heldobject).css("left", startingLeft + "px")
+  $("#" + heldobject).css("top", startingTop + "px")
+  $("#" + heldobject).css("position", "absolute")
   heldobject = null;
 
 }

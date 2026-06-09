@@ -51,10 +51,10 @@ recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "gren
 recipies.push({ menuenum: 1, name: "Lemon Drop", ingredients: ["vodka", "tripleSec", "lemonJuice", "syrup", "sugar"], image: "Images/Drinks/MartiniGlass/LemonDrop.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
 recipies.push({ menuenum: 1, name: "White Russian", ingredients: ["vodka", "kahula", "creamLiqueur", "cherries"], image: "Images/Drinks/RocksGlass/WhiteRussian.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 
-recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequilla", "limeJuice", "lime", "salt", "sugar"], image: "Images/Drinks/MartiniGlass/Margarita.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
-recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequilla", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
-recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequilla", "kahula", "syrup"], image: "Images/Drinks/MartiniGlass/EspressoMartini.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
-recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequilla", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 2, name: "Margarita", ingredients: ["tequila", "limeJuice", "lime", "salt", "sugar"], image: "Images/Drinks/MartiniGlass/Margarita.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 2, name: "Tequila Sunrise", ingredients: ["tequila", "orangeJuice", "grenadine", "cherries"], image: "Images/Drinks/ColinsGlass/TequilaSunrise.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
+recipies.push({ menuenum: 2, name: "Tequila Espresso Martini", ingredients: ["tequila", "kahula", "syrup"], image: "Images/Drinks/MartiniGlass/EspressoMartini.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
+recipies.push({ menuenum: 2, name: "Matador", ingredients: ["tequila", "pineappleJuice", "limeJuice", "tripleSec"], image: "Images/Drinks/ColinsGlass/Matador.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
 
 recipies.push({ menuenum: 3, name: "Gin and Tonic", ingredients: ["gin", "tonic", "lime"], image: "Images/Drinks/RocksGlass/GinAndTonic.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 recipies.push({ menuenum: 3, name: "Gimlet", ingredients: ["gin", "syrup", "limeJuice", "lime"], image: "Images/Drinks/MartiniGlass/Gimlet.png", glassImage: "Images/Drinks/MartiniGlass/MartiniGlass.png" })
@@ -135,7 +135,7 @@ function selectRecipie(selectedDrink) {
 //Display selected recipie on sheet, place correct glass
 function displayRecipie(recipie) {
   $("#menuText").html("")
-  $("#menuText").append("<div>" + recipie.name + ": </div>" + "<p>ingredients: </p>")
+  $("#menuText").append("<div><h3>" + recipie.name + ": <h3></div>" + "")
   for (let i = 0; i < recipie.ingredients.length; i++) {
     $("#menuText").append("<div>" + recipie.ingredients[i] + "</div>")
     console.log("appended: " + recipie.ingredients[i])

@@ -1,11 +1,284 @@
 body {
+    margin: 0vh;
+}
+
+
+.wrapper {
+
+    background: white;
+    box-sizing: border-box;
+    resize: horizontal;
+    overflow: auto;
+    max-width: 100%;
+    height: calc(100vh - 16px);
+}
+
+.background {
+    width: 100%;
+    padding-bottom: 75%;
+    background-image: url('Images/bar_background.png');
+    background-color: aquamarine;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    /* Take full width of parent */
+
+
+
+
+}
+
+
+.recipieWindow {
+    display: flex;
+
+    background-color: rgba(52, 96, 97, 0.516);
+
+    position: absolute;
+    width: 100%;
+    padding-bottom: 75%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    text-align: center;
+}
+
+.recipieSheet {
+    background-color: rgb(251, 250, 194);
+    height: 70%;
+
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 0;
+    right: 0;
+    text-align: center;
+    border: 5px solid rgb(0, 221, 255);
+    border-radius: 10px;
+}
+
+.recipieSheetText {
+
+    display: grid;
+    gap: 50px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.drinkDisplay {
+
+    cursor: pointer;
+    height: 250px;
+    width: 200px;
+    align-items: last baseline;
+    justify-content: flex-end;
+    position: relative;
+    background-color: rgb(147, 232, 232);
+}
+
+.bar_shelf {
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+
+}
+
+.shelf_row {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 80%;
+}
+
+.shelf_container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    height: 100px;
+    width: 10%;
+
+}
+
+.menu_container {
+
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+
+    height: 100%;
+    width: 100vw;
+    margin-top: 50px;
+    margin-right: 100px;
+
+}
+
+.counter {
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px;
+    width: 500px;
+    height: auto;
+
+}
+
+.shaker {
+    display: flex;
+
+
+    height: 200px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.recipieList {
+    background-color: rgb(255, 249, 236);
+    padding: 25px;
+    height: 200px;
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.menu {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    z-index: -0;
+}
+
+.glass {
+    display: flex;
+
+    pointer-events: none;
+    height: 200px;
+    width: 100px;
     align-items: center;
     justify-content: center;
 }
 
+.glassImage {
+    height: auto;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
 
-.background {
+
+}
+
+.item {
+    background-color: bisque;
+    pointer-events: none;
+    height: 100%;
+    width: auto;
+    position:relative;
+    align-items: last baseline;
+    justify-content: flex-end;
+
+}
+
+.image {
+    object-fit: contain;
+    width: 100%;
+}
+
+.menuImage {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    height: auto;
     position: absolute;
-    width: 50vw;
-    height: 50vh;
+    bottom: 0;
+    z-index: 20;
+
+}
+
+.menuTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+
+}
+
+#leftButton {
+    margin-right: 100px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: last baseline;
+    justify-content: flex-end;
+
+}
+
+#rightButton {
+    margin-left: 100px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: last baseline;
+    justify-content: flex-end;
+
+}
+
+.heldItem {
+    z-index: 100;
+}
+
+.spacer {
+    height: 150px;
+    width: 100%;
+}
+
+.spacer2 {
+    height: 80px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.label {
+    margin: auto;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 12px;
+    width: 180px;
+    z-index: 3;
+    pointer-events: none;
 }

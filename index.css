@@ -8,13 +8,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 1280px;
-    height: 880px;
+    width: 1080px;
+    height: 680px;
     margin: auto;
 
 
 }
-
+p{
+    font-size: smaller;
+}
 
 .recipieWindow {
     display: flex;
@@ -149,8 +151,8 @@ body {
 .recipieList {
     background-color: rgb(255, 249, 236);
     padding: 25px;
-    height: 200px;
-    width: 100px;
+    height: 150px;
+    width: 80px;
     margin-bottom: 50px;
 }
 
@@ -173,7 +175,7 @@ body {
 
 .glassImage {
     height: auto;
-    width: 300px;
+    width: 200px;
     align-items: center;
     justify-content: center;
 
@@ -194,7 +196,7 @@ body {
     display: block;
     margin: 0 auto;
     height: auto;
-    width: 100%;
+    width: 80%;
     height: auto;
     position: absolute;
     bottom: 0;
@@ -254,7 +256,7 @@ body {
 }
 
 .spacer {
-    height: 150px;
+    height: 60px;
     width: 100%;
 }
 

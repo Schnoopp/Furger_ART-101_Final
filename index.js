@@ -246,7 +246,6 @@ $(".shaker").click(function () {
     console.log("added ingredient: " + heldobject)
     itemLetGo();
   }
-
 });
 //check if the ingredient is in the recipie and check for duplicates before adding
 function checkIngredient(ing) {
@@ -259,7 +258,6 @@ function checkIngredient(ing) {
       console.log(drinkInProgress)
     }
   }
-
 }
 //compare arrays 
 $("#done").click(function () {
@@ -267,14 +265,11 @@ $("#done").click(function () {
     console.log("ALLDONE")
     $(".glass").html('<img src="' + activeRecipie.image + '" , class="glassImage">');
     pour.play();
-
   }
   else (
     console.log(" your drink not done")
   )
-
 });
-
 
 function compareArrays(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
@@ -299,7 +294,6 @@ function compareArrays(arr1, arr2) {
     if (sortedArr1[i] !== sortedArr2[i]) return false;
   }
   return true;
-
 
 };
 

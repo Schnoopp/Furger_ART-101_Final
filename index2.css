@@ -1,17 +1,29 @@
 body {
     margin: 0vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    align-items: center;
+    align-self: center;
 }
 
 
 .wrapper {
-
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin: auto;
     background: white;
     box-sizing: border-box;
     resize: horizontal;
     overflow: auto;
-    max-width: 100%;
+    max-width: 1280px;
+    max-height: 1020px;
     height: calc(100vh - 16px);
 }
+
+
+
 
 .background {
     width: 100%;
@@ -21,12 +33,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
     z-index: 10;
-    /* Take full width of parent */
-
-
-
-
+    margin-left: 0;
+    margin-right: 0
 }
 
 
@@ -88,13 +100,16 @@ body {
 
 .bar_shelf {
     background-color: black;
-    width: 100%;
+    max-width: 1280px;
+    align-self: center;
     position: absolute;
     justify-content: center;
     align-items: center;
     left: 0;
     right: 0;
-
+    margin-left: 0;
+    margin-right: 0;
+    margin:auto;
 }
 
 .shelf_row {
@@ -107,6 +122,7 @@ body {
 }
 
 .shelf_container {
+    background-color: aqua;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -191,16 +207,18 @@ body {
     background-color: bisque;
     pointer-events: none;
     height: 100%;
-    width: auto;
-    position:relative;
+    width: 10%;
+    position:absolute;
     align-items: last baseline;
-    justify-content: flex-end;
+    justify-content: baseline;
+    bottom: 0;
+    left: 10;
 
 }
 
 .image {
     object-fit: contain;
-    width: 100%;
+    width: 80%;
 }
 
 .menuImage {

@@ -4,11 +4,46 @@ let ingredientList = [];
 let activeRecipie;
 let menuenumber = 1;
 let drinkInProgress = [];
+let label_show = false;
 
+//Audio files
+var pour = new Audio('sound/drinkPour.mp3');
+
+barAudio = new Audio('sound/barAmbiance.wav');
+barAudio.volume = .075;
+if (typeof barAudio.loop == 'boolean') {
+  barAudio.loop = true;
+}
+else {
+  barAudio.addEventListener('ended', function () {
+    this.currentTime = 0;
+
+    this.play();
+  }, false);
+}
+barAudio.play();
+
+musicLoop = new Audio('sound/bgMusic.mp3');
+musicLoop.volume = .2;
+if (typeof musicLoop.loop == 'boolean') {
+  musicLoop.loop = true;
+}
+else {
+  musicLoop.addEventListener('ended', function () {
+    this.currentTime = 0;
+
+    this.play();
+  }, false);
+}
+musicLoop.play();
+
+
+//TimerFunction
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//All Recipies
 const recipies = [];
 recipies.push({ menuenum: 1, name: "Screwdriver", ingredients: ["vodka", "orangeJuice"], image: "Images/Drinks/ColinsGlass/Screwdriver.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
 recipies.push({ menuenum: 1, name: "Dirty Shirley", ingredients: ["vodka", "grenadine", "cherries", "limeJuice"], image: "Images/Drinks/ColinsGlass/DirtyShirley.png", glassImage: "Images/Drinks/ColinsGlass/CollinsGlass.png" })
@@ -35,10 +70,12 @@ recipies.push({ menuenum: 5, name: "Revolver", ingredients: ["whiskey", "kahula"
 recipies.push({ menuenum: 5, name: "B52 Shot", ingredients: ["whiskey", "kahula", "creamLiqueur", "tripleSec",], image: "Images/Drinks/RocksGlass/B52.png", glassImage: "Images/Drinks/RocksGlass/ShotGlass.png" })
 recipies.push({ menuenum: 5, name: "Whiskey Sour", ingredients: ["whiskey", "lemonJuice", "syrup", "cherries"], image: "Images/Drinks/RocksGlass/WhiskeySour.png", glassImage: "Images/Drinks/RocksGlass/RocksGlass.png" })
 
+//Intialize Page
 getAllIngredients()
 GetAllShelves()
 menuDisplay();
 
+//Menu Drink Selection Functionality
 function menuDisplay() {
   $('.recipieSheetText').html("")
   for (let i = 0; i < recipies.length; i++) {
@@ -71,6 +108,8 @@ $("#rightButton").click(function () {
     menuDisplay();
   }
 })
+
+
 $(".recipieSheetText").on("click", ".drinkDisplay", function () {
   console.log("drink clicked: " + this.id)
   selectRecipie(this.id)
@@ -86,13 +125,13 @@ $(".drinkDisplay").click(function () {
 
 function selectRecipie(selectedDrink) {
   activeRecipie = recipies[getItemValue(selectedDrink, recipies)]
-  displayRecipie(activeRecipie)
-
+  displayRecipie(activeRecipie);
   drinkInProgress = [];
 
 
 };
 
+//Display selected recipie on sheet, place correct glass
 function displayRecipie(recipie) {
   $("#menuText").html("")
   $("#menuText").append("<div>" + recipie.name + ": </div>" + "<p>ingredients: </p>")
@@ -102,6 +141,8 @@ function displayRecipie(recipie) {
   }
   $(".glass").html('<img src="' + recipie.glassImage + '" , class="glassImage">');
 }
+
+//showcase menu when clicked
 
 $(".menu_container").click(function () {
 
@@ -155,7 +196,7 @@ function getItemValue(object, list) {
   }
 };
 
-
+// be able to click on item and send it home
 
 $(".shelf_container").click(function () {
 
@@ -180,32 +221,6 @@ $(".shelf_container").click(function () {
 
 });
 
-let label_show = false;
-
-$(".shelf_container").hover(
-  function () {
-    if (isHoldingObject == false) {
-      if (label_show == false) {
-        $(".label").stop(true, true).slideDown(300);
-        $(".label").html(ingredientList[this.id].name)
-        console.log(ingredientList[this.id].name)
-        label_show = true
-
-      }
-    }
-  },
-  function () {
-
-    label_show = false
-    delay(1000).then(() => {
-      if (label_show == false) {
-        $(".label").stop(true, true).slideUp(300);
-      }
-    })
-  }
-);
-
-
 
 function itemLetGo() {
   let itemIndex = getItemValue(heldobject, ingredientList)
@@ -222,7 +237,17 @@ function itemLetGo() {
 
 }
 
+// take ingredients and add them to the drink in progress aray
+$(".shaker").click(function () {
 
+  if (isHoldingObject == true) {
+    checkIngredient(heldobject)
+    console.log("added ingredient: " + heldobject)
+    itemLetGo();
+  }
+
+});
+//check if the ingredient is in the recipie and check for duplicates before adding
 function checkIngredient(ing) {
   console.log(activeRecipie.ingredients.length)
   if (activeRecipie.ingredients.includes(ing)) {
@@ -235,26 +260,16 @@ function checkIngredient(ing) {
   }
 
 }
-
-
-
-$(".shaker").click(function () {
-
-  if (isHoldingObject == true) {
-    checkIngredient(heldobject)
-    console.log("added ingredient: " + heldobject)
-    itemLetGo();
-  }
-
-});
-
+//compare arrays 
 $("#done").click(function () {
   if (compareArrays(drinkInProgress, activeRecipie.ingredients) == true) {
     console.log("ALLDONE")
     $(".glass").html('<img src="' + activeRecipie.image + '" , class="glassImage">');
+    pour.play();
+
   }
   else (
-    console.log("dumbass your drink not done")
+    console.log(" your drink not done")
   )
 
 });
@@ -286,6 +301,37 @@ function compareArrays(arr1, arr2) {
 
 
 };
+
+
+
+
+// Label display and text, timer functionalty used here to not hide label immedietly off of items when scrolling through
+$(".shelf_container").hover(
+  function () {
+    if (isHoldingObject == false) {
+      if (label_show == false) {
+        $(".label").stop(true, true).slideDown(300);
+        $(".label").html(ingredientList[this.id].name)
+        console.log(ingredientList[this.id].name)
+        label_show = true
+
+      }
+    }
+  },
+  function () {
+
+    label_show = false
+    delay(1000).then(() => {
+      if (label_show == false) {
+        $(".label").stop(true, true).slideUp(300);
+      }
+    })
+  }
+);
+
+
+
+
 
 
 // document bs

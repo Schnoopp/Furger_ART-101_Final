@@ -48,6 +48,7 @@ body {
 }
 
 .recipieSheetText {
+
     display: grid;
     gap: 50px;
     padding: 50px;
@@ -69,7 +70,7 @@ body {
     align-items: last baseline;
     justify-content: flex-end;
     position: relative;
-    background-color: aqua;
+    background-color: rgb(147, 232, 232);
 }
 
 .bar_shelf {
@@ -91,7 +92,7 @@ body {
     justify-content: center;
     gap: 0px;
     align-items: center;
-    background-color: rgba(48, 17, 10, 0.401);
+
     height: 150px;
     width: 80%;
 
@@ -102,21 +103,22 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-color: rgba(34, 8, 1, 0.508);
+
     height: 100%;
     width: 100vw;
 
 }
 
 .menu_container {
+
     cursor: pointer;
     display: flex;
     align-items: flex-end;
-    background-color: rgba(34, 8, 1, 0.508);
+
     height: 100%;
     width: 100vw;
     margin-top: 50px;
-    margin-right:400px;
+    margin-right: 100px;
 
 }
 
@@ -126,7 +128,7 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: rgba(180, 180, 180, 0);
+
     margin: 50px;
     width: 500px;
     height: auto;
@@ -135,17 +137,17 @@ body {
 
 .shaker {
     display: flex;
-    background-color: rgb(203, 218, 220);
+
 
     height: 200px;
-    width: 200px;
+    width: 100px;
     align-items: center;
     justify-content: center;
 
 }
 
 .recipieList {
-    background-color: rgb(216, 189, 174);
+    background-color: rgb(255, 249, 236);
     padding: 25px;
     height: 200px;
     width: 100px;
@@ -161,10 +163,10 @@ body {
 
 .glass {
     display: flex;
-    background-color: rgb(203, 218, 220);
+
     pointer-events: none;
     height: 200px;
-    width: 200px;
+    width: 100px;
     align-items: center;
     justify-content: center;
 }
@@ -264,131 +266,59 @@ body {
 
 /*alc ids*/
 
-#vodka {
-    background-color: rgb(255, 255, 255);
-}
+#vodka {}
 
-#tequilla {
-    background-color: rgb(244, 248, 217);
+#tequilla {}
 
-}
+#rum {}
 
-#rum {
-    background-color: rgb(161, 121, 90);
+#gin {}
 
-}
-
-#gin {
-    background-color: rgb(75, 203, 220);
-
-}
-
-#whiskey {
-    background-color: rgb(140, 9, 9);
-
-}
+#whiskey {}
 
 /*mixers*/
-#grenadine {
-    background-color: rgb(255, 0, 85);
-
-}
+#grenadine {}
 
 
-#bitters {
-    background-color: rgb(122, 67, 12);
+#bitters {}
 
+#creamLiqueur {}
 
+#kahula {}
 
-}
-
-#creamLiqueur {
-    background-color: rgb(255, 229, 182);
-
-}
-
-#kahula {
-    background-color: rgb(73, 24, 3);
-
-}
-
-#tripleSec {
-    background-color: rgb(255, 89, 0);
-
-}
+#tripleSec {}
 
 /*Juice ids*/
-#tonic {
-    background-color: rgba(27, 141, 255, 0.125);
+#tonic {}
 
-}
+#lemonJuice {}
 
-#lemonJuice {
-    background-color: rgb(250, 255, 115);
-
-}
-
-#limeJuice {
-    background-color: rgb(78, 255, 107);
-
-}
+#limeJuice {}
 
 
-#orangeJuice {
-    background-color: rgb(255, 128, 0);
+#orangeJuice {}
 
+#pineappleJuice {}
 
-}
-
-#pineappleJuice {
-    background-color: rgb(255, 225, 0);
-
-}
-
-#syrup {
-    background-color: rgb(255, 255, 255);
-
-}
+#syrup {}
 
 /*garnish ids*/
 
-#cherries {
-    background-color: rgb(141, 3, 3);
+#cherries {}
 
+#lime {}
 
-}
+#salt {}
 
-#lime {
-    background-color: rgb(47, 214, 28);
+#sugar {}
 
-}
+#mint {}
 
-#salt {
-    background-color: rgb(207, 209, 202);
-
-}
-
-#sugar {
-    background-color: rgb(231, 244, 241);
-
-}
-
-#mint {
-    background-color: rgb(17, 139, 86);
-
-}
-
-#orangePeel {
-    background-color: rgb(255, 102, 0);
-
-}
+#orangePeel {}
 
 
 
 
-#following {
-    box-shadow: 0 0 20px black;
-}
 
 .label {
     margin: auto;

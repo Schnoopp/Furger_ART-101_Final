@@ -35,7 +35,7 @@ p{
 
 .recipieSheet {
     background-color: rgb(251, 250, 194);
-    height: 70%;
+    height: 620px;
 
     justify-content: center;
     align-items: center;
@@ -67,8 +67,8 @@ p{
 .drinkDisplay {
 
     cursor: pointer;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     align-items: last baseline;
     justify-content: flex-end;
     position: relative;
